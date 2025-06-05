@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<!DOCTYPE html><html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,145 +7,79 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #fff;
-      color: #400000;
-      line-height: 1.6;
+      background-color: #2e0014; /* vinho escuro */
+      color: #ffffff;
     }
-
     header {
-      background-color: #400000;
-      color: white;
-      padding: 2rem;
+      background-color: #1a000a;
+      padding: 20px;
       text-align: center;
     }
-
-    header h1 {
-      font-size: 2.5rem;
-      margin: 0;
+    header img {
+      max-width: 200px;
     }
-
-    section {
-      padding: 2rem;
-      max-width: 1200px;
+    .container {
+      padding: 40px 20px;
+      max-width: 1000px;
       margin: auto;
     }
-
-    .button {
+    h1, h2 {
+      color: #ffffff;
+    }
+    .botao {
       display: inline-block;
-      padding: 1rem 2rem;
-      background-color: #800000;
+      background-color: #a10b32;
       color: white;
+      padding: 15px 30px;
       text-decoration: none;
-      font-weight: bold;
-      border-radius: 5px;
-      margin-top: 1rem;
+      border-radius: 10px;
+      margin: 20px 0;
     }
-
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1rem;
-      margin-top: 1rem;
+    .mapa, .cardapio-img {
+      margin: 40px 0;
+      text-align: center;
     }
-
-    .gallery img {
-      width: 100%;
-      border-radius: 8px;
-    }
-
-    iframe {
-      width: 100%;
-      height: 400px;
-      border: 0;
-      border-radius: 8px;
-      margin-top: 1rem;
-    }
-
     footer {
-      background-color: #400000;
+      background-color: #1a000a;
       color: white;
       text-align: center;
-      padding: 1rem;
+      padding: 20px;
     }
-
-    .whatsapp-button {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #25D366;
-      color: white;
-      padding: 1rem;
-      border-radius: 50%;
-      text-align: center;
-      text-decoration: none;
-      font-size: 1.5rem;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    }
-
-    .menu-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 1rem;
-    }
-
-    .menu-table th, .menu-table td {
-      padding: 0.8rem;
-      border-bottom: 1px solid #ddd;
-      text-align: left;
-    }
-
-    .menu-table th {
-      background-color: #800000;
-      color: white;
+    .horarios {
+      margin-top: 10px;
+      font-weight: bold;
     }
   </style>
 </head>
-<body>
-  <header>
+<body>  <header>
+    <img src="Logo tex grill.png" alt="Logo Tex Grill">
+  </header>  <div class="container">
     <h1>O sabor que conquista Capão da Canoa</h1>
-  </header>
+    <p>Desde 04/09/2006, o Tex Grill Restaurante traz um buffet variado com sabores que marcam gerações. Localizado no coração de Capão da Canoa, somos referência em qualidade e tradição. Nossa história se mistura com a própria cidade, que cresceu e se transformou ao nosso lado.</p><div class="horarios">
+  <p>📍 Funcionamento: Segunda a Sexta das 11h às 14h | Sábado e Domingo das 11h às 15h</p>
+</div>
 
-  <section>
-    <h2>Sobre o Tex Grill</h2>
-    <p>Desde 04 de setembro de 2006, o Tex Grill Restaurante é referência em sabor e tradição em Capão da Canoa. Nosso buffet é variado e alternado diariamente, proporcionando sempre uma nova experiência gastronômica para nossos clientes. Contamos também com um cardápio especial de bebidas.</p>
-  </section>
+<a href="https://teletex.alfalabs.com.br/inicio" class="botao">Pedir Online</a>
+<a href="https://wa.me/555136258203" class="botao">Fale pelo WhatsApp</a>
 
-  <section>
-    <h2>Cardápio de Bebidas</h2>
-    <table class="menu-table">
-      <tr><th>Bebida</th><th>Preço</th><th>Opções</th></tr>
-      <tr><td>Refrigerante lata</td><td>R$ 6,00</td><td>Pepsi, Guaraná Antártica, Sukita laranja, Soda limonada</td></tr>
-      <tr><td>Água</td><td>R$ 4,00</td><td>Com gás ou sem gás</td></tr>
-      <tr><td>Suco integral</td><td>R$ 6,00</td><td>Uva ou laranja</td></tr>
-      <tr><td>H2OH!</td><td>R$ 7,00</td><td>Limão ou limoneto</td></tr>
-      <tr><td>Cerveja 600ml</td><td>R$ 18,00</td><td>Original ou Spaten</td></tr>
-      <tr><td>Taça de vinho</td><td>R$ 6,00</td><td>Tinto seco ou branco seco</td></tr>
-    </table>
-  </section>
+<div class="cardapio-img">
+  <h2>Cardápio de Bebidas</h2>
+  <img src="cardapio_bebidas_texgrill.jpg" alt="Cardápio Tex Grill" style="max-width:100%; border-radius: 10px;">
+</div>
 
-  <section>
-    <h2>Galeria</h2>
-    <div class="gallery">
-      <img src="https://instagram.fsdu20-1.fna.fbcdn.net/o1/v/t16/f1/m78/70E50C8BCB4798990B0E15F2229A4E85_carousel_medium_x2.jpg?stp=dst-jpg_p720x720&_nc_ht=instagram.fsdu20-1.fna.fbcdn.net&_nc_cat=103&_nc_ohc=TxKhgqYxP0UQ7kNvgHoBGAh&edm=APs17CUBAAAA&ccb=7-5&oh=00_AYBMBXw0Z6cLLEeZTFcEdMDX7DJ0bi9rdHxHOQpH3gB5Uw&oe=6661FEF6&_nc_sid=10d13b" alt="Buffet">
-      <img src="https://instagram.fsdu20-1.fna.fbcdn.net/o1/v/t16/f1/m78/4AB25E2488339CC5C9A55CC6A9EF426B_carousel_medium_x2.jpg?stp=dst-jpg_p720x720&_nc_ht=instagram.fsdu20-1.fna.fbcdn.net&_nc_cat=105&_nc_ohc=TV3Ytt_rq90Q7kNvgHqxU4Q&edm=APs17CUBAAAA&ccb=7-5&oh=00_AYC9TzYlZ4OE72KyC-6R45YwYHVQ6H4quGptOKMW9pFC-A&oe=6661FF4E&_nc_sid=10d13b" alt="Ambiente">
-    </div>
-  </section>
+<div class="mapa">
+  <h2>Como chegar</h2>
+  <iframe src="https://www.google.com/maps?q=Tex+Grill+Restaurante,+Cap%C3%A3o+da+Canoa&output=embed" width="100%" height="400" style="border:0; border-radius: 10px;" allowfullscreen></iframe>
+</div>
 
-  <section>
-    <h2>Como chegar</h2>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3455.1839310032236!2d-50.007728!3d-29.764387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951929b1d3d7512f%3A0xc8691574a3a50846!2sTex%20Grill%20Restaurante!5e0!3m2!1spt-BR!2sbr!4v1717602331291!5m2!1spt-BR!2sbr" allowfullscreen=""></iframe>
-  </section>
+<h2>O que dizem nossos clientes</h2>
+<ul>
+  <li>“Comida deliciosa e atendimento excelente! Recomendo muito.” – Google</li>
+  <li>“O melhor buffet de Capão. Sempre volto!” – Google</li>
+  <li>“Ambiente agradável e ótimo custo-benefício.” – Google</li>
+</ul>
 
-  <section>
-    <h2>Fale conosco</h2>
-    <p>Entre em contato pelo WhatsApp para tirar dúvidas ou fazer reservas:</p>
-    <a class="button" href="https://wa.me/555136258203" target="_blank">Fale com a gente</a>
-  </section>
-
-  <footer>
-    <p>&copy; 2024 Tex Grill Restaurante. Todos os direitos reservados.</p>
-  </footer>
-
-  <a class="whatsapp-button" href="https://wa.me/555136258203" target="_blank">💬</a>
-</body>
+  </div>  <footer>
+    &copy; 2025 Tex Grill Restaurante. Todos os direitos reservados.
+  </footer></body>
 </html>
