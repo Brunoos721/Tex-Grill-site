@@ -1,201 +1,152 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tex Grill Restaurante</title>
   <style>
-    /* Cores e fontes base */
-    :root {
-      --primary-color: #b22222; /* tom vermelho escuro */
-      --secondary-color: #1a1a1a; /* preto quase */
-      --text-color: #f0f0f0;
-      --accent-color: #ff4500;
-    }
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: var(--secondary-color);
-      color: var(--text-color);
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      color: #400000;
       line-height: 1.6;
     }
-    a {
-      color: var(--primary-color);
-      text-decoration: none;
-    }
+
     header {
-      background: var(--primary-color);
-      padding: 1rem 2rem;
+      background-color: #400000;
+      color: white;
+      padding: 2rem;
       text-align: center;
     }
+
     header h1 {
-      margin: 0;
       font-size: 2.5rem;
+      margin: 0;
     }
-    header p {
-      font-size: 1.2rem;
-      margin-top: 0.3rem;
-      font-style: italic;
-    }
-    .btn-whatsapp {
-      display: inline-block;
-      margin: 1rem auto;
-      padding: 0.8rem 1.5rem;
-      background-color: var(--accent-color);
-      color: #fff;
-      font-weight: bold;
-      border-radius: 30px;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.4);
-      transition: background-color 0.3s ease;
-    }
-    .btn-whatsapp:hover {
-      background-color: #e03e00;
-    }
-    main {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
+
     section {
-      margin-bottom: 3rem;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
     }
-    h2 {
-      border-bottom: 3px solid var(--primary-color);
-      padding-bottom: 0.5rem;
-      margin-bottom: 1rem;
-      font-weight: 700;
-      font-size: 1.8rem;
-      color: var(--primary-color);
+
+    .button {
+      display: inline-block;
+      padding: 1rem 2rem;
+      background-color: #800000;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      margin-top: 1rem;
     }
-    p {
-      font-size: 1.1rem;
-    }
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-    ul li {
-      background: #333;
-      margin-bottom: 0.5rem;
-      padding: 0.6rem 1rem;
-      border-radius: 6px;
-    }
-    /* Galeria fotos Instagram */
+
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fill,minmax(150px,1fr));
-      gap: 12px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
     }
+
     .gallery img {
       width: 100%;
       border-radius: 8px;
-      object-fit: cover;
-      height: 150px;
-      filter: brightness(0.9);
-      transition: filter 0.3s ease;
     }
-    .gallery img:hover {
-      filter: brightness(1);
-    }
-    /* Depoimentos */
-    .testimonial {
-      background: #222;
-      padding: 1rem 1.5rem;
-      margin-bottom: 1rem;
-      border-radius: 10px;
-      font-style: italic;
-      box-shadow: inset 0 0 8px #b22222;
-    }
-    .testimonial strong {
-      display: block;
-      margin-top: 0.7rem;
-      font-weight: 700;
-      color: var(--accent-color);
-      font-style: normal;
-    }
-    /* Mapa */
-    .map-container iframe {
+
+    iframe {
       width: 100%;
-      height: 350px;
-      border: none;
-      border-radius: 12px;
-      box-shadow: 0 0 15px rgba(178,34,34,0.5);
+      height: 400px;
+      border: 0;
+      border-radius: 8px;
+      margin-top: 1rem;
     }
-    /* Rodapé */
+
     footer {
+      background-color: #400000;
+      color: white;
       text-align: center;
-      padding: 1.5rem 1rem;
-      background: #111;
-      font-size: 0.9rem;
-      color: #666;
+      padding: 1rem;
     }
-    /* Botão whatsapp fixo */
-    .whatsapp-float {
+
+    .whatsapp-button {
       position: fixed;
       bottom: 20px;
       right: 20px;
       background-color: #25D366;
       color: white;
+      padding: 1rem;
       border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 2.5rem;
-      z-index: 1000;
-      transition: background-color 0.3s ease;
-      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      font-size: 1.5rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     }
-    .whatsapp-float:hover {
-      background-color: #1ebe57;
+
+    .menu-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+
+    .menu-table th, .menu-table td {
+      padding: 0.8rem;
+      border-bottom: 1px solid #ddd;
+      text-align: left;
+    }
+
+    .menu-table th {
+      background-color: #800000;
+      color: white;
     }
   </style>
 </head>
 <body>
+  <header>
+    <h1>O sabor que conquista Capão da Canoa</h1>
+  </header>
 
-<header>
-  <h1>Tex Grill Restaurante</h1>
-  <p>O sabor que conquista Capão da Canoa</p>
-  <a class="btn-whatsapp" href="https://wa.me/555136258203" target="_blank" rel="noopener noreferrer">
-    Fale pelo WhatsApp
-  </a>
-</header>
-
-<main>
-  <section id="sobre">
-    <h2>Sobre o Restaurante</h2>
-    <p>Desde 04 de setembro de 2006, o Tex Grill oferece uma experiência gastronômica única, combinando sabores tradicionais com um ambiente familiar. Localizado em Capão da Canoa, o restaurante é conhecido por seu buffet alternado diariamente, atendimento acolhedor e ambiente convidativo.</p>
+  <section>
+    <h2>Sobre o Tex Grill</h2>
+    <p>Desde 04 de setembro de 2006, o Tex Grill Restaurante é referência em sabor e tradição em Capão da Canoa. Nosso buffet é variado e alternado diariamente, proporcionando sempre uma nova experiência gastronômica para nossos clientes. Contamos também com um cardápio especial de bebidas.</p>
   </section>
 
-  <section id="buffet-cardapio">
-    <h2>Buffet e Cardápio</h2>
-    <p>Nosso buffet é alternado diariamente, garantindo sempre pratos frescos e saborosos para você. Além disso, oferecemos um cardápio especial de bebidas para acompanhar sua refeição.</p>
+  <section>
+    <h2>Cardápio de Bebidas</h2>
+    <table class="menu-table">
+      <tr><th>Bebida</th><th>Preço</th><th>Opções</th></tr>
+      <tr><td>Refrigerante lata</td><td>R$ 6,00</td><td>Pepsi, Guaraná Antártica, Sukita laranja, Soda limonada</td></tr>
+      <tr><td>Água</td><td>R$ 4,00</td><td>Com gás ou sem gás</td></tr>
+      <tr><td>Suco integral</td><td>R$ 6,00</td><td>Uva ou laranja</td></tr>
+      <tr><td>H2OH!</td><td>R$ 7,00</td><td>Limão ou limoneto</td></tr>
+      <tr><td>Cerveja 600ml</td><td>R$ 18,00</td><td>Original ou Spaten</td></tr>
+      <tr><td>Taça de vinho</td><td>R$ 6,00</td><td>Tinto seco ou branco seco</td></tr>
+    </table>
   </section>
 
-  <section id="galeria">
-    <h2>Galeria de Fotos</h2>
-    <div class="gallery" id="instagram-photos">
-      <!-- Fotos do Instagram serão inseridas aqui -->
-      <img src="https://instagram.fpoa4-1.fna.fbcdn.net/v/t51.2885-15/e35/296802758_574812433376695_5961259933432056154_n.jpg?tp=1&_nc_ht=instagram.fpoa4-1.fna.fbcdn.net&_nc_cat=106&_nc_ohc=H6EkrHoB5mMAX9c6loR&edm=ABfd0MgBAAAA&ccb=7-5&oh=6f61f4fa2d7bb1a39e867a362a416306&oe=64B7E3F6&_nc_sid=7bff83" alt="Foto prato 1" />
-      <img src="https://instagram.fpoa4-1.fna.fbcdn.net/v/t51.2885-15/e35/298205995_586238392153099_6794060436556613660_n.jpg?tp=1&_nc_ht=instagram.fpoa4-1.fna.fbcdn.net&_nc_cat=111&_nc_ohc=8mzRUeNvt-wAX_9o0q-&edm=ABfd0MgBAAAA&ccb=7-5&oh=25a52b1a6ee24746efb77254fa79e6bb&oe=64B56A71&_nc_sid=7bff83" alt="Foto prato 2" />
-      <img src="https://instagram.fpoa4-1.fna.fbcdn.net/v/t51.2885-15/e35/301299974_1366413069082060_8491646351360262058_n.jpg?tp=1&_nc_ht=instagram.fpoa4-1.fna.fbcdn.net&_nc_cat=111&_nc_ohc=vXXkoC-YZaEAX9DdwNTE&edm=ABfd0MgBAAAA&ccb=7-5&oh=5313fdb0afdb1ec55a52422b07fa3c1d&oe=64B6D9F2&_nc_sid=7bff83" alt="Foto prato 3" />
-      <!-- pode adicionar mais imagens aqui -->
+  <section>
+    <h2>Galeria</h2>
+    <div class="gallery">
+      <img src="https://instagram.fsdu20-1.fna.fbcdn.net/o1/v/t16/f1/m78/70E50C8BCB4798990B0E15F2229A4E85_carousel_medium_x2.jpg?stp=dst-jpg_p720x720&_nc_ht=instagram.fsdu20-1.fna.fbcdn.net&_nc_cat=103&_nc_ohc=TxKhgqYxP0UQ7kNvgHoBGAh&edm=APs17CUBAAAA&ccb=7-5&oh=00_AYBMBXw0Z6cLLEeZTFcEdMDX7DJ0bi9rdHxHOQpH3gB5Uw&oe=6661FEF6&_nc_sid=10d13b" alt="Buffet">
+      <img src="https://instagram.fsdu20-1.fna.fbcdn.net/o1/v/t16/f1/m78/4AB25E2488339CC5C9A55CC6A9EF426B_carousel_medium_x2.jpg?stp=dst-jpg_p720x720&_nc_ht=instagram.fsdu20-1.fna.fbcdn.net&_nc_cat=105&_nc_ohc=TV3Ytt_rq90Q7kNvgHqxU4Q&edm=APs17CUBAAAA&ccb=7-5&oh=00_AYC9TzYlZ4OE72KyC-6R45YwYHVQ6H4quGptOKMW9pFC-A&oe=6661FF4E&_nc_sid=10d13b" alt="Ambiente">
     </div>
   </section>
 
-  <section id="depoimentos">
-    <h2>Depoimentos</h2>
-    <div class="testimonial">
-      "Comida sempre nova e bem gostosa. Proprietário muito atencioso."
-      <strong>– Luiz Ebrain</strong>
-    </div>
-    <div class="testimonial">
-      "A comida é boa, com carnes como a vermelha, peixe, frango, bastante opção de salada e sobremesas variadas."
-      <strong>– Fabio S</strong>
-    </div>
-    <div class="testimonial">
-      "É um local para uma comida simples, mas boa."
-      <strong>– Andre Gustavo Adami</strong>
-   
+  <section>
+    <h2>Como chegar</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3455.1839310032236!2d-50.007728!3d-29.764387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951929b1d3d7512f%3A0xc8691574a3a50846!2sTex%20Grill%20Restaurante!5e0!3m2!1spt-BR!2sbr!4v1717602331291!5m2!1spt-BR!2sbr" allowfullscreen=""></iframe>
+  </section>
+
+  <section>
+    <h2>Fale conosco</h2>
+    <p>Entre em contato pelo WhatsApp para tirar dúvidas ou fazer reservas:</p>
+    <a class="button" href="https://wa.me/555136258203" target="_blank">Fale com a gente</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Tex Grill Restaurante. Todos os direitos reservados.</p>
+  </footer>
+
+  <a class="whatsapp-button" href="https://wa.me/555136258203" target="_blank">💬</a>
+</body>
+</html>
