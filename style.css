@@ -113,36 +113,34 @@ footer {
   border-radius: 10px;
 }
 
-<section class="section">
-  <h2> Nosso Buffet em Destaque</h2>
-  <div class="video-carousel">
-    <button class="nav-button left" onclick="previousVideo()">◀</button>
-    <video id="buffetVideo" controls>
-      <source src="buffet1.mp4" type="video/mp4">
-      Seu navegador não suporta vídeo.
-    </video>
-    <button class="nav-button right" onclick="nextVideo()">▶</button>
-  </div>
-</section>
+.video-carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  position: relative;
+  max-width: 100%;
+}
 
-<script>
-  const videos = ['buffet1.mp4', 'buffet2.mp4', 'buffet3.mp4', 'buffet4.mp4', 'buffet5.mp4'];
-  let current = 0;
-  const videoElement = document.getElementById('buffetVideo');
+.video-carousel video {
+  width: 100%;
+  max-width: 700px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
 
-  function updateVideo() {
-    videoElement.querySelector('source').src = videos[current];
-    videoElement.load();
-    videoElement.play();
-  }
+.nav-button {
+  background-color: #660000;
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
 
-  function previousVideo() {
-    current = (current - 1 + videos.length) % videos.length;
-    updateVideo();
-  }
+.nav-button:hover {
+  background-color: #800000;
+}
 
-  function nextVideo() {
-    current = (current + 1) % videos.length;
-    updateVideo();
-  }
-</script>
