@@ -33,25 +33,39 @@
   </section>
 
   <section class="section">
-    <h2>📹 Nosso Buffet em Destaque</h2>
-    <div class="video-gallery">
-      <video controls>
-        <source src="video1.mp4" type="video/mp4">
-      </video>
-      <video controls>
-        <source src="video2.mp4" type="video/mp4">
-      </video>
-      <video controls>
-        <source src="video3.mp4" type="video/mp4">
-      </video>
-      <video controls>
-        <source src="video4.mp4" type="video/mp4">
-      </video>
-      <video controls>
-        <source src="video5.mp4" type="video/mp4">
-      </video>
-    </div>
-  </section>
+  <h2> Nosso Buffet em Destaque</h2>
+  <div class="video-carousel">
+    <button class="nav-button left" onclick="previousVideo()">◀</button>
+    <video id="buffetVideo" controls>
+      <source src="buffet1.mp4" type="video/mp4">
+      Seu navegador não suporta vídeo.
+    </video>
+    <button class="nav-button right" onclick="nextVideo()">▶</button>
+  </div>
+</section>
+
+<script>
+  const videos = ['buffet1.mp4', 'buffet2.mp4', 'buffet3.mp4', 'buffet4.mp4', 'buffet5.mp4'];
+  let current = 0;
+  const videoElement = document.getElementById('buffetVideo');
+
+  function updateVideo() {
+    videoElement.querySelector('source').src = videos[current];
+    videoElement.load();
+    videoElement.play();
+  }
+
+  function previousVideo() {
+    current = (current - 1 + videos.length) % videos.length;
+    updateVideo();
+  }
+
+  function nextVideo() {
+    current = (current + 1) % videos.length;
+    updateVideo();
+  }
+</script>
+
   
   <section class="cardapio">
     <h2>Cardápio de Bebidas</h2>
