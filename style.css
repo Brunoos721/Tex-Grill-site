@@ -14,15 +14,13 @@ header {
 }
 
 .logo {
-  width: 300px;
-  background-color: #ffffff;
-  padding: 20px;
-  border-radius: 10px;
+  max-width: 400px;
+  margin: 1rem auto;
   display: block;
-  margin: 20px auto;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff; /* reforça o fundo branco se necessário */
+  padding: 10px; /* espaço extra ao redor */
+  border-radius: 10px;
 }
-
 
 section {
   padding: 2rem;
