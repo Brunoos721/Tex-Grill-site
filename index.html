@@ -1,86 +1,69 @@
-<!DOCTYPE html><html lang="pt-BR">
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tex Grill Restaurante</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #ffffff;
-      color: #3d0000;
-    }
-    header {
-      background-color: #3d0000;
-      color: white;
-      padding: 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    header img {
-      height: 60px;
-    }
-    .hero {
-      text-align: center;
-      padding: 2rem 1rem;
-    }
-    .hero h1 {
-      font-size: 2rem;
-      color: #3d0000;
-    }
-    section {
-      padding: 2rem 1rem;
-      max-width: 800px;
-      margin: auto;
-    }
-    section h2 {
-      color: #3d0000;
-    }
-    .cardapio {
-      text-align: center;
-      margin-top: 2rem;
-    }
-    .cardapio img {
-      width: 100%;
-      max-width: 600px;
-      border: 2px solid #3d0000;
-    }
-    .buttons {
-      text-align: center;
-      margin-top: 2rem;
-    }
-    .buttons a {
-      background-color: #3d0000;
-      color: white;
-      padding: 0.8rem 1.5rem;
-      margin: 0.5rem;
-      text-decoration: none;
-      border-radius: 5px;
-    }
-    iframe {
-      width: 100%;
-      height: 300px;
-      border: none;
-    }
-    footer {
-      background-color: #3d0000;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <img src="Logo-tex-grill.png" alt="Tex Grill Logo" />
-    <div>Tex Grill Restaurante</div>
-  </header>  <div class="hero">
+    <img src="logo.png" alt="Logo Tex Grill" class="logo" />
     <h1>O sabor que conquista Capão da Canoa</h1>
-  </div>  <section>
-    <h2>Sobre Nós</h2>
-    <p>Desde 04 de setembro de 2006, o Tex Grill Restaurante é referência em sabor, tradição e qualidade em Capão da Canoa. Servimos um buffet variado todos os dias, com pratos preparados com carinho e ingredientes selecionados. Somos um espaço acolhedor para famílias e amigos se reunirem e aproveitarem momentos inesquecíveis.</p>
-    <p>Capão da Canoa é um dos destinos mais queridos do litoral gaúcho, com praias belíssimas, clima acolhedor e uma gastronomia que encanta. E o Tex Grill faz parte dessa história, sendo uma das escolhas preferidas de quem visita a cidade.</p>
-  </section>  <section>
-    <h2>Horário de Funcionamento</h2>
+    <div class="botoes">
+      <a href="https://teletex.alfalabs.com.br/inicio" class="btn">Pedido Online</a>
+      <a href="https://wa.me/555136258203" class="btn">Reservas via WhatsApp</a>
+    </div>
+  </header>
+
+  <section class="sobre">
+    <h2>Sobre o Tex Grill</h2>
+    <p>Desde 04 de setembro de 2006, o Tex Grill Restaurante oferece aos clientes de Capão da Canoa um buffet variado e saboroso. Nossa missão é proporcionar uma experiência gastronômica única, com qualidade, tradição e um ambiente acolhedor para toda a família.</p>
+    <p><strong>Horário de funcionamento:</strong><br>
+    Segunda a Sexta: 11h às 14h<br>
+    Sábados e Domingos: 11h às 15h</p>
+  </section>
+
+  <section class="capao">
+    <h2>Capão da Canoa</h2>
+    <p>Localizada no litoral norte do Rio Grande do Sul, Capão da Canoa é um dos destinos turísticos mais procurados da região. Com praias encantadoras, comércio ativo e uma comunidade acolhedora, é o cenário ideal para desfrutar de boa comida e momentos especiais. E é nesse cenário que o Tex Grill conquistou seu espaço. Capão da Canoa, teve suas origens no nome Arroio da Pescaria, por volta de 1900, quando pescadores, aventureiros e viajantes começaram a se instalar à beira-mar. A denominação Capão da Canoa surgiu na década de 1940, associada a uma fazenda que prestava auxílio aos veranistas, e acabou por substituir o nome anterior. A emancipação da cidade de Osório ocorreu em 1982, com a posse do primeiro prefeito em 1983. </p>
+  </section>
+
+  <section class="cardapio">
+    <h2>Cardápio de Bebidas</h2>
+    <img src="cardapio.jpg" alt="Cardápio de Bebidas" class="cardapio-img" />
+  </section>
+
+  <section class="depoimentos">
+    <h2>Avaliação de clientes</h2>
+    <div class="depoimento">
+      <p>"Comida excelente, atendimento impecável! Melhor buffet da cidade!"</p>
+      <span>— Maria Clara</span>
+    </div>
+    <div class="depoimento">
+      <p>"Ambiente familiar, comida caseira deliciosa. Recomendo de olhos fechados!"</p>
+      <span>— João Pedro</span>
+    </div>
+    <div class="depoimento">
+      <p>"Preço justo, muita variedade no buffet. Sempre que venho a Capão almoço aqui."</p>
+      <span>— Fernanda Lopes</span>
+    </div>
+    <div class="depoimento">
+      <p>"Buffet com muitas opções e tudo muito bem feito. Atendimento 10/10."</p>
+      <span>— Gustavo A.</span>
+    </div>
+  </section>
+
+  <section class="mapa">
+    <h2>Como chegar</h2>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.010171832306!2d-50.0193!3d-29.7619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951c3e0a41bd7b7d%3A0x74d1b1532e15d780!2sTex%20Grill%20Restaurante!5e0!3m2!1spt-BR!2sbr!4v1717570000000"
+      width="80%" height="150" style="border:0;" allowfullscreen="" loading="lazy">
+    </iframe>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Tex Grill Restaurante. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>
